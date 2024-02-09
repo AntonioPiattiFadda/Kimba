@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Nav from './components/nav/Nav';
+import Stacking from './components/stacking/Stacking';
+import Lunchpad from './components/lunchpad/Lunchpad';
+import InterfacesContainer from './components/interfacesContainer/InterfacesContainer';
 
 function App() {
+  const [stacking, setStacking] = useState(true);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav setStacking={setStacking} />
+      <InterfacesContainer>
+        {stacking ? <Stacking /> : <Lunchpad />}
+      </InterfacesContainer>
     </div>
   );
 }

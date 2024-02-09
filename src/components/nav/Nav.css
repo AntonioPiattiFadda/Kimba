@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  width: 100vw;
+  max-width: 1920px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+button {
+  border-radius: var(--border-radius-button);
+  color: var(--color-white);
+}
+.stacking-button {
+  padding: var(--padding-button);
+  background-color: var(--color-black);
+}
+.lunchpad-button {
+  background-color: var(--color-primary);
+  padding: var(--padding-button);
+}
+
+.connect-button {
+  padding: var(--padding-button);
+  background-color: var(--color-black);
+}

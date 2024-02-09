@@ -1,0 +1,8 @@
+/* variables.css */
+:root {
+  --color-primary: #3cab4b;
+  --color-black: black;
+  --color-white: white;
+  --border-radius-button: 6.5rem;
+  --padding-button: 0.25rem 0.9rem;
+}
