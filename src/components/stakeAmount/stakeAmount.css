@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+.availableAmount {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.availableAmount span {
+  font-weight: 500;
+  font-size: 12px;
+}
+.inputContainer {
+  position: relative;
+  width: 100%;
+}
+.numberInput {
+  width: 100%;
+  padding: 8px;
+  border-radius: var(--border-radius-input);
+  border: 1px solid black;
+  background-color: var(--background-color-app);
+  outline: none;
+}
+
+.numberInput::-webkit-inner-spin-button,
+.numberInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.numberInput[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.maxButton {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 10px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius-button);
+  cursor: pointer;
+}
+
+.aproveButton {
+  background-color: var(--color-primary);
+  padding: var(--padding-button);
+}

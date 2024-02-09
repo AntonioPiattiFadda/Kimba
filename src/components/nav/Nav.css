@@ -1,14 +1,17 @@
 nav {
   display: flex;
-  width: 100vw;
-  max-width: 1920px;
+  max-width: var(--nav-max-width);
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  height: 150px;
 }
 
 button {
   border-radius: var(--border-radius-button);
   color: var(--color-white);
+  border: none;
+  cursor: pointer;
 }
 .stacking-button {
   padding: var(--padding-button);

@@ -1,0 +1,6 @@
+.valuesContainer {
+  width: var(--container-width);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

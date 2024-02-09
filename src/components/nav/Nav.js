@@ -15,20 +15,22 @@ const Nav = ({ setStacking }) => {
       <nav className="nav">
         <img src="" alt="" />
 
-        <button
-          className="stacking-button"
-          name="Stacking"
-          onClick={handleClick}
-        >
-          $KIMBA Stacking
-        </button>
-        <button
-          className="lunchpad-button"
-          name="Lunchpad"
-          onClick={handleClick}
-        >
-          $KIMBA Lunchpad
-        </button>
+        <div>
+          <button
+            className="stacking-button"
+            name="Stacking"
+            onClick={handleClick}
+          >
+            $KIMBA Stacking
+          </button>
+          <button
+            className="lunchpad-button"
+            name="Lunchpad"
+            onClick={handleClick}
+          >
+            $KIMBA Lunchpad
+          </button>
+        </div>
 
         <button className="connect-button">Connect Wallet</button>
       </nav>

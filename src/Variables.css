@@ -4,5 +4,12 @@
   --color-black: black;
   --color-white: white;
   --border-radius-button: 6.5rem;
+  --border-radius-input: 0.5rem;
   --padding-button: 0.25rem 0.9rem;
+  --container-width: 1280px;
+  --nav-max-width: 1920px;
+  --background-color-app: #f5f5f5ae;
+  --box-shadow-card: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
+
+/*1920x1080 y lo del centro lo haces en un contenedor de máximo 1280px de ancho*/
