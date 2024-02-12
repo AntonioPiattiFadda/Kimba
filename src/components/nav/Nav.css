@@ -1,10 +1,12 @@
 nav {
-  display: flex;
-  max-width: var(--nav-max-width);
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 170px;
+}
+.logoKimba {
+  width: 250px;
+  align-self: baseline;
+  margin: 15px 0 0 15px;
 }
 
 button {
@@ -13,16 +15,34 @@ button {
   border: none;
   cursor: pointer;
 }
+.centralButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 250px;
+}
 .stacking-button {
-  padding: var(--padding-button);
   background-color: var(--color-black);
+  width: 212px;
+  height: 38px;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 .lunchpad-button {
   background-color: var(--color-primary);
-  padding: var(--padding-button);
+  width: 212px;
+  height: 38px;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .connect-button {
-  padding: var(--padding-button);
   background-color: var(--color-black);
+  width: 212px;
+  height: 38px;
+
+  margin: 20px 45px 0 auto;
+  font-weight: bold;
+  font-size: 0.9rem;
 }

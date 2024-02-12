@@ -7,10 +7,15 @@ import './stakeAmount.css';
 const StakeAmount = ({ setAvailableAmount, availableAmount }) => {
   const [inputValue, setInputValue] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const [amoutExceededMessage, setAmoutExceededMessage] = useState(false);
+
   const handleChange = (event) => {
     if (event.target.value > availableAmount) {
       setInputValue(availableAmount);
-      alert('You do not have enough funds');
+      setAmoutExceededMessage(true);
+      setTimeout(() => {
+        setAmoutExceededMessage(false);
+      }, 3000);
       return;
     }
     setInputValue(event.target.value);
@@ -37,6 +42,12 @@ const StakeAmount = ({ setAvailableAmount, availableAmount }) => {
           value={inputValue}
           onChange={handleChange}
         />
+        {amoutExceededMessage && (
+          <span className="amoutExceededMessage">
+            Amount exceeded available balance. Your maximum available amount is{' '}
+            {availableAmount}
+          </span>
+        )}
         <button onClick={handleMaxClick} className="maxButton">
           Max
         </button>

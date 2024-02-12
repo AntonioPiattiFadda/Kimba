@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../Variables.css';
 import './Nav.css';
+import Logo from '../../assets/Imagenes/kimba.png';
+
 const Nav = ({ setStacking }) => {
   const handleClick = (e) => {
     if (e.target.name === 'Stacking') {
@@ -13,9 +15,9 @@ const Nav = ({ setStacking }) => {
   return (
     <header>
       <nav className="nav">
-        <img src="" alt="" />
+        <img className="logoKimba" src={Logo} alt="Logo Kimba" />
 
-        <div>
+        <div className="centralButtons">
           <button
             className="stacking-button"
             name="Stacking"
@@ -28,7 +30,7 @@ const Nav = ({ setStacking }) => {
             name="Lunchpad"
             onClick={handleClick}
           >
-            $KIMBA Lunchpad
+            $KIMBA LunchPad
           </button>
         </div>
 

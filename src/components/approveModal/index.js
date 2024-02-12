@@ -10,6 +10,7 @@ const AproveModal = ({
 }) => {
   return (
     <div className="modal">
+      <div className="modalBackground"></div>
       <div className="modalContent">
         <h3>Approve KIMBA</h3>
         <p>

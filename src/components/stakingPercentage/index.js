@@ -1,24 +1,34 @@
 import React from 'react';
-import { useState } from 'react';
 import StakeAmount from '../stakeAmount';
 import StackingReturn from '../stackingReturn';
 import ReferralLink from '../referralLink';
+import '../../Variables.css';
 import './stakingPercentage.css';
 
-const StakingPercentage = () => {
-  const [availableAmount, setAvailableAmount] = useState(40);
-  const [referralLink, setReferralLink] = useState(
-    'HTTPS://KIMBA.FINANCE?REF=123456'
-  );
-
+const StakingPercentage = ({
+  returnDays,
+  returnPercentage,
+  availableAmount,
+  setAvailableAmount,
+  referralLink,
+}) => {
   return (
-    <div>
+    <div className="sectionContainer">
       <h3 className="title">Stake Kimba get Kimba</h3>
 
       <div className="returnCards">
-        <StackingReturn />
-        <StackingReturn />
-        <StackingReturn />
+        <StackingReturn
+          returnPercentage={returnPercentage}
+          returnDays={returnDays}
+        />
+        <StackingReturn
+          returnPercentage={returnPercentage}
+          returnDays={returnDays}
+        />
+        <StackingReturn
+          returnPercentage={returnPercentage}
+          returnDays={returnDays}
+        />
       </div>
 
       <StakeAmount

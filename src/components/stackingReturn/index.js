@@ -1,11 +1,11 @@
 import React from 'react';
 import './stackingReturn.css';
 
-const StackingReturn = () => {
+const StackingReturn = ({ returnPercentage, returnDays }) => {
   return (
     <div className="card">
-      <span className="title">30 Days</span>
-      <span className="percentage">5% Return</span>
+      <span className="title">{returnDays} Days</span>
+      <span className="percentage">{returnPercentage}% Return</span>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: var(--container-img-referral-width);
   gap: 10px;
 }
 .availableAmount {
@@ -9,21 +9,28 @@
   display: flex;
   justify-content: space-between;
 }
-.availableAmount span {
+.availableAmount span:nth-child(1) {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 20px;
+}
+.availableAmount span:nth-child(2) {
+  font-weight: 500;
+  font-size: 16px;
 }
 .inputContainer {
   position: relative;
   width: 100%;
 }
 .numberInput {
-  width: 100%;
-  padding: 8px;
+  width: calc(100% - 32px);
+  padding: 8px 16px;
   border-radius: var(--border-radius-input);
   border: 1px solid black;
   background-color: var(--background-color-app);
   outline: none;
+  height: 20px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .numberInput::-webkit-inner-spin-button,
@@ -37,7 +44,7 @@
 
 .maxButton {
   position: absolute;
-  right: 0;
+  right: 1%;
   top: 50%;
   transform: translateY(-50%);
   padding: 0 10px;
@@ -46,9 +53,22 @@
   border: none;
   border-radius: var(--border-radius-button);
   cursor: pointer;
+  width: 59px;
+  height: 25px;
 }
 
 .aproveButton {
   background-color: var(--color-primary);
   padding: var(--padding-button);
+  width: 212px;
+  height: 38px;
+  margin: 16px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.amoutExceededMessage {
+  position: absolute;
+  color: var(--color-red);
+  font-size: 12px;
+  margin-top: 4px;
 }

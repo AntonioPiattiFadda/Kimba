@@ -1,3 +1,6 @@
+.sectionContainer {
+  width: var(--container-img-referrence-width);
+}
 .title {
   text-align: center;
 }
