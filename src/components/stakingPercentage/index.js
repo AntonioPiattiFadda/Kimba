@@ -1,6 +1,6 @@
 import React from 'react';
 import StakeAmount from '../stakeAmount';
-import StackingReturn from '../stackingReturn';
+import StakingReturn from '../stakingReturn';
 import ReferralLink from '../referralLink';
 import '../../Variables.css';
 import './stakingPercentage.css';
@@ -17,15 +17,15 @@ const StakingPercentage = ({
       <h3 className="title">Stake Kimba get Kimba</h3>
 
       <div className="returnCards">
-        <StackingReturn
+        <StakingReturn
           returnPercentage={returnPercentage}
           returnDays={returnDays}
         />
-        <StackingReturn
+        <StakingReturn
           returnPercentage={returnPercentage}
           returnDays={returnDays}
         />
-        <StackingReturn
+        <StakingReturn
           returnPercentage={returnPercentage}
           returnDays={returnDays}
         />

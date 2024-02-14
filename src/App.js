@@ -1,18 +1,18 @@
 import './App.css';
 import { useState } from 'react';
 import Nav from './components/nav/Nav';
-import Stacking from './components/stacking';
-import Lunchpad from './components/lunchpad';
+import Staking from './components/staking';
+import Launchpad from './components/launchpad';
 import InterfacesContainer from './components/interfacesContainer';
 
 function App() {
-  const [stacking, setStacking] = useState(true);
+  const [staking, setStaking] = useState(true);
 
   return (
     <div className="App">
-      <Nav setStacking={setStacking} />
+      <Nav setStaking={setStaking} />
       <InterfacesContainer>
-        {stacking ? <Stacking /> : <Lunchpad />}
+        {staking ? <Staking /> : <Launchpad />}
       </InterfacesContainer>
     </div>
   );

@@ -3,12 +3,12 @@ import '../../Variables.css';
 import './Nav.css';
 import Logo from '../../assets/Imagenes/kimba.png';
 
-const Nav = ({ setStacking }) => {
+const Nav = ({ setStaking }) => {
   const handleClick = (e) => {
-    if (e.target.name === 'Stacking') {
-      setStacking(true);
+    if (e.target.name === 'Staking') {
+      setStaking(true);
     } else {
-      setStacking(false);
+      setStaking(false);
     }
   };
 
@@ -19,18 +19,18 @@ const Nav = ({ setStacking }) => {
 
         <div className="centralButtons">
           <button
-            className="stacking-button"
-            name="Stacking"
+            className="staking-button"
+            name="Staking"
             onClick={handleClick}
           >
-            $KIMBA Stacking
+            $KIMBA Staking
           </button>
           <button
-            className="lunchpad-button"
-            name="Lunchpad"
+            className="launchpad-button"
+            name="Launchpad"
             onClick={handleClick}
           >
-            $KIMBA LunchPad
+            $KIMBA Launchpad
           </button>
         </div>
 

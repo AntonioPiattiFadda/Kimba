@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import ValuesContainer from '../valuesContainer';
 import StakingPercentage from '../stakingPercentage';
 import CircleLoader from '../circleLoader';
-import './stacking.css';
+import './staking.css';
 import Faq from '../faq';
 
-const Stacking = () => {
+const Staking = () => {
   const [loading, setLoading] = useState(true);
 
   const [totalValue, setTotalValue] = useState(4);
@@ -35,7 +35,7 @@ const Stacking = () => {
   }
 
   return (
-    <div className="stackingContainer">
+    <div className="stakingContainer">
       <ValuesContainer
         totalValue={totalValue}
         personalValue={personalValue}
@@ -52,4 +52,4 @@ const Stacking = () => {
   );
 };
 
-export default Stacking;
+export default Staking;
