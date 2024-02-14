@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,700;1,100&display=swap');
+
+.payModule {
+  height: 530px;
+  width: 870px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+}
+
+.infoContainer {
+  width: 70%;
+}
+
+.secondContainer {
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blackBorder {
+  border: 3px solid black;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 10px;
+}
+.greenBorder {
+  border: 3px solid var(--color-primary);
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.logoKredict {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+}
+
+.KredicContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+
+.kredict {
+  font-weight: 500;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+.sign {
+  font-weight: 400;
+}
+
+.validations {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 3px;
+  width: 100px;
+}
+.buttonView {
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  color: var(--color-primary);
+}
+
+.audited {
+  background-color: black;
+}
+.verified {
+  background-color: var(--color-primary);
+}
+.verified,
+.audited {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  letter-spacing: 1px;
+  width: 115px;
+  height: 15px;
+  padding: 5px;
+  border-radius: 25px;
+}
+.imgAudited {
+  width: 15px;
+}
+
+.thirdContainer {
+  display: flex;
+  flex-direction: column;
+}
+.secondTitle {
+  font-size: x-large;
+  text-align: start;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+.coinButtonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.coinButton {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: white;
+  gap: 2px;
+  margin-bottom: 10px;
+}
+.coinImg {
+  overflow: visible;
+}
+
+.amount {
+  font-family: 'Poppins', sans-serif;
+  font-size: small;
+  font-weight: 400;
+  margin: auto 35px 5px auto;
+}
+.amountNumber {
+  font-weight: 600;
+}
+
+.input {
+  width: 92%;
+  margin-right: auto;
+  padding: 8px;
+  border-radius: var(--border-radius-input);
+  border: 1px solid black;
+  background-color: var(--background-color-app);
+  outline: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.maxInputDiv {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maxButton {
+  position: absolute;
+  z-index: 1;
+  right: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 10px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius-button);
+  cursor: pointer;
+  width: 59px;
+  height: 25px;
+}
+.amoutExceededMessage {
+  position: absolute;
+  color: var(--color-red);
+  font-size: 12px;
+  margin-top: 55px;
+}
+
+.fourthContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+}
+
+.approveButton {
+  width: 250px;
+  height: 45px;
+  border-radius: 30px;
+  margin: 15px;
+  font-weight: bold;
+  font-size: x-large;
+  background-color: var(--color-primary);
+}
+
+.conversion {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.fifthContainer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 7px;
+  width: 575px;
+  height: 75px;
+}
+
+.active {
+  margin-right: 445px;
+  font-weight: bold;
+  font-size: x-large;
+  margin-left: 5px;
+}
+
+.value {
+  color: var(--color-primary);
+  font-weight: bold;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.data {
+  border-bottom: 1px solid black;
+  height: 35px;
+}
+
+.secondData {
+  height: 35px;
+}
+
+.number {
+  margin-left: 5px;
+  margin-right: 385px;
+  font-size: x-large;
+}
+
+.linkPresale {
+  width: 100%;
+  padding: 5px;
+  margin-top: 30px;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.linkPresale img {
+  width: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.buttonCointainer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 15px;
+  border-left: 1px solid black;
+  padding: 10px;
+  color: white;
+}
+
+.button {
+  background-color: black;
+  border-radius: 30px;
+  height: 40px;
+  font-weight: bold;
+  width: 228px;
+  font-size: 20px;
+}

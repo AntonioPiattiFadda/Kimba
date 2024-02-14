@@ -3,6 +3,7 @@ import ValuesContainer from '../valuesContainer';
 import StakingPercentage from '../stakingPercentage';
 import CircleLoader from '../circleLoader';
 import './stacking.css';
+import Faq from '../faq';
 
 const Stacking = () => {
   const [loading, setLoading] = useState(true);
@@ -26,7 +27,11 @@ const Stacking = () => {
   }, []);
 
   if (loading) {
-    return <CircleLoader />;
+    return (
+      <div>
+        <CircleLoader />
+      </div>
+    );
   }
 
   return (
