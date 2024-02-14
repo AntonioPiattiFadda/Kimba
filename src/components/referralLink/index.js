@@ -2,11 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import '../../Variables.css';
 import './referralLink.css';
- 
+
 const ReferralLink = ({ referralLink }) => {
   const [coppiedLink, setCoppiedLink] = useState(false);
   const handleCopy = () => {
-    document.execCommand('copy');
+    navigator.clipboard.writeText(referralLink);
     setCoppiedLink(true);
     setTimeout(() => {
       setCoppiedLink(false);

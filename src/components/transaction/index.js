@@ -3,6 +3,10 @@ import './transaction.css';
 import Copy from '../../assets/Imagenes/copy-outline.svg';
 
 function Transaction() {
+  const [coppiedLink, setCoppiedLink] = useState({
+    coppiedPresaleLink: false,
+    coppiedTokenAdress: false,
+  });
   const [transaction, setTransaction] = useState({
     presaleAdress: 0xd78241521946bf,
     tokenName: 'PepeFork INU',
@@ -19,8 +23,26 @@ function Transaction() {
     liquidityPercent: '51%',
     liquidityLockupTime: '180 days after pool ends',
   });
-  const handleCopy = () => {
-    document.execCommand('copy');
+  const handleCopy = (TextToCopy) => {
+    navigator.clipboard.writeText(TextToCopy);
+
+    if (TextToCopy === transaction.presaleAdress) {
+      setCoppiedLink((prevState) => ({
+        ...prevState,
+        coppiedPresaleLink: true,
+      }));
+    } else {
+      setCoppiedLink((prevState) => ({
+        ...prevState,
+        coppiedTokenAdress: true,
+      }));
+    }
+    setTimeout(() => {
+      setCoppiedLink({
+        coppiedPresaleLink: false,
+        coppiedTokenAdress: false,
+      });
+    }, 2000);
   };
 
   return (
@@ -29,7 +51,14 @@ function Transaction() {
         <span>Presale Adress</span>
         <span className="transactionPA">
           {transaction.presaleAdress}
-          <img onClick={handleCopy} alt="copy" src={Copy} />
+          <img
+            onClick={() => handleCopy(transaction.presaleAdress)}
+            alt="copy"
+            src={Copy}
+          />
+          {coppiedLink.coppiedPresaleLink && (
+            <span className="coppiedPresaleLink">Coppied</span>
+          )}
         </span>
       </div>
       <div className="transactionInfo">
@@ -48,7 +77,14 @@ function Transaction() {
         <span>Token Adress</span>
         <span className="transactionTA">
           {transaction.tokenAdress}
-          <img onClick={handleCopy} alt="copy" src={Copy} />
+          <img
+            onClick={() => handleCopy(transaction.tokenAdress)}
+            alt="copy"
+            src={Copy}
+          />
+          {coppiedLink.coppiedTokenAdress && (
+            <span className="coppiedPresaleLink">Coppied</span>
+          )}
         </span>
       </div>
       <div className="transactionInfo">

@@ -32,6 +32,7 @@
   color: rgb(216, 111, 202);
   display: flex;
   gap: 5px;
+  position: relative;
 }
 .transactionTA img {
   width: 20px;
@@ -51,5 +52,11 @@
 .transactionWarningMessage {
   padding-top: 0;
   color: rgb(41, 108, 144);
+  font-size: 12px;
+}
+.coppiedPresaleLink {
+  position: absolute;
+  top: -90%;
+  right: 0;
   font-size: 12px;
 }
