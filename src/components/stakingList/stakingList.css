@@ -1,0 +1,40 @@
+.stakingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 900px;
+    max-width: 1920px;
+}
+
+.stakingTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+
+.stakingTable th,
+.stakingTable td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #000000; /* Ajusta el color según tu preferencia */
+}
+
+.stakingTable th {
+    background-color: #000000; /* Ajusta el color según tu preferencia */
+    color: white;
+    font-weight: 400;
+}
+
+/* Botón Unstake */
+.stakingTable button {
+    padding: 8px 30px;
+    border: none;
+    border-radius: 100px;
+    background-color: #3cab4b; /* Ajusta el color según tu preferencia */
+    color: white;
+    cursor: pointer;
+}
+
+.stakingTable button:hover {
+    background-color: #32823c; /* Ajusta el color para el hover según tu preferencia */
+}

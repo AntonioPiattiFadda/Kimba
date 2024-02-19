@@ -14,3 +14,14 @@
   font-size: 1.3rem;
   text-align: center;
 }
+.cardButton {
+  color: black !important;
+  font-weight: 500 !important;
+  font-size: 1.3rem !important;
+  text-align: center !important;
+  font-family: "Coolvetica";
+}
+.cardSelected {
+  color: white !important;
+  background: black !important;
+}

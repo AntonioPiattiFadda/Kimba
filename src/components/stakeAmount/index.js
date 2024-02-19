@@ -1,17 +1,35 @@
-import React from 'react';
-import { useState } from 'react';
-import AproveModal from '../approveModal';
-import '../../Variables.css';
-import './stakeAmount.css';
+import React from "react";
+import { useState } from "react";
+import AproveModal from "../approveModal";
+import "../../Variables.css";
+import "./stakeAmount.css";
+import { useWeb3Context } from "../../context/Web3Context";
 
-const StakeAmount = ({ setAvailableAmount, availableAmount }) => {
+const StakeAmount = ({ selectedIndex }) => {
+  const { kimbaBalance } = useWeb3Context();
   const [inputValue, setInputValue] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [amoutExceededMessage, setAmoutExceededMessage] = useState(false);
+  const { stakeTokens } = useWeb3Context();
+
+  const getReferralAddressFromURL = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const refParam = urlParams.get("ref");
+    if (!refParam) return null;
+
+    // Decodificar de base64
+    try {
+      const decodedRef = atob(refParam);
+      return decodedRef;
+    } catch (error) {
+      console.error("Error decodificando el parámetro de referido:", error);
+      return null;
+    }
+  };
 
   const handleChange = (event) => {
-    if (event.target.value > availableAmount) {
-      setInputValue(availableAmount);
+    if (event.target.value > kimbaBalance) {
+      setInputValue(kimbaBalance);
       setAmoutExceededMessage(true);
       setTimeout(() => {
         setAmoutExceededMessage(false);
@@ -22,48 +40,33 @@ const StakeAmount = ({ setAvailableAmount, availableAmount }) => {
   };
 
   const handleMaxClick = () => {
-    setInputValue(availableAmount);
+    setInputValue(kimbaBalance);
   };
-  const handleAproveClick = () => {
-    setShowModal(!showModal);
+
+  const handleApproveClick = () => {
+    const referralAddress = getReferralAddressFromURL();
+    stakeTokens(inputValue, selectedIndex+1, referralAddress);
   };
 
   return (
     <div className="container">
-      {' '}
       <div className="availableAmount">
         <span>Stake amount</span>
-        <span>Available amount {availableAmount} KIMBA</span>
+        <span>Available amount {kimbaBalance} KIMBA</span>
       </div>
       <div className="inputContainer">
-        <input
-          className="numberInput"
-          type="number"
-          value={inputValue}
-          onChange={handleChange}
-        />
+        <input className="numberInput" type="number" value={inputValue} onChange={handleChange} />
         {amoutExceededMessage && (
-          <span className="amoutExceededMessage">
-            Amount exceeded available balance. Your maximum available amount is{' '}
-            {availableAmount}
-          </span>
+          <span className="amoutExceededMessage">Amount exceeded available balance. Your maximum available amount is {kimbaBalance}</span>
         )}
         <button onClick={handleMaxClick} className="maxButton">
           Max
         </button>
       </div>
-      <button onClick={handleAproveClick} className="aproveButton">
-        {' '}
-        Approve & Stake{' '}
+      <button onClick={handleApproveClick} className="aproveButton">
+        Approve & Stake
       </button>
-      {showModal && (
-        <AproveModal
-          setShowModal={setShowModal}
-          setAvailableAmount={setAvailableAmount}
-          availableAmount={availableAmount}
-          inputValue={inputValue}
-        />
-      )}
+      {showModal && <AproveModal setShowModal={setShowModal} kimbaBalance={kimbaBalance} inputValue={inputValue} />}
     </div>
   );
 };

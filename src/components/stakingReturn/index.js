@@ -1,13 +1,15 @@
-import React from 'react';
-import './stackingReturn.css';
+import React from "react";
+import "./stackingReturn.css";
 
-const StackingReturn = ({ returnPercentage, returnDays }) => {
+const StakingReturn = ({ returnPercentage, returnDays, isSelected, onSelect }) => {
   return (
-    <div className="card">
-      <span className="title">{returnDays} Days</span>
-      <span className="percentage">{returnPercentage}% Return</span>
-    </div>
+    <button className="cardButton" onClick={onSelect}>
+      <div className={isSelected ? "card cardSelected" : "card"}>
+        <span className="title">{returnDays}</span>
+        <span className="percentage">{returnPercentage}% Return</span>
+      </div>
+    </button>
   );
 };
 
-export default StackingReturn;
+export default StakingReturn;

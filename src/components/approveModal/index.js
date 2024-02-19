@@ -1,22 +1,14 @@
-import React from 'react';
-import '../../Variables.css';
-import './approveModal.css';
+import React from "react";
+import "../../Variables.css";
+import "./approveModal.css";
 
-const AproveModal = ({
-  setShowModal,
-  setAvailableAmount,
-  availableAmount,
-  inputValue,
-}) => {
+const AproveModal = ({ setShowModal }) => {
   return (
     <div className="modal">
       <div className="modalBackground"></div>
       <div className="modalContent">
         <h3>Approve KIMBA</h3>
-        <p>
-          You need to approve KIMBA to stake. This will allow KIMBA to be moved
-          from your wallet to the staking contract.
-        </p>
+        <p>You need to approve KIMBA to stake. This will allow KIMBA to be moved from your wallet to the staking contract.</p>
         <div className="modalButtons">
           <button onClick={() => setShowModal(false)} className="cancelButton">
             Cancel
@@ -24,7 +16,6 @@ const AproveModal = ({
           <button
             onClick={() => {
               setShowModal(false);
-              setAvailableAmount(availableAmount - inputValue);
             }}
             className="approveButton"
           >
